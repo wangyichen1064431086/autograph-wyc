@@ -63,7 +63,7 @@ module.exports = {
     },
 
     saveCsv: function(filename, csvString){
-        //写入文件：将csvString写入到public/data/${filename}
+        //写入文件：将csvString写入到public/data/${filename},并返回csvString的可读的大小
 
         const dest = `${dataDir}/${filename}`;//即public/data/${filename}
         console.log(`Saving:${dest}`);
