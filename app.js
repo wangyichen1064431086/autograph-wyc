@@ -1,11 +1,9 @@
-const koa = require('koa');
+const Koa = require('koa');
 const serve = require('koa-static');
 const logger = require('koa-logger');//Development style logger middleware for Koa.
-const buildArtifacts = require('./util/build-artifacts.js');//该文件待看
-
-const render = require('./util/render.js');//该文件待看
-
-const app = koa();
+const buildPage = require('./util/build-page.js');
+const styles = require('./util/styles.js');
+const app = new Koa();
 
 app.use(serve('public',{
 	index: false
